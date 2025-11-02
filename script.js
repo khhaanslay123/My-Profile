@@ -26,3 +26,30 @@ window.addEventListener("load", () => {
     }, 1200);
   }, 500);
 });
+let fullTitle = "khhaanslay";
+let current = "";
+let i = 0;
+
+function typeTitle() {
+  if (i < fullTitle.length) {
+    current += fullTitle.charAt(i);
+    document.title = current;
+    i++;
+    setTimeout(typeTitle, 300);
+  } else {
+    setTimeout(() => {
+      i = 0;
+      current = "";
+      typeTitle();
+    }, 2000);
+  }
+}
+typeTitle();
+window.addEventListener("scroll", function() {
+    const navbar = document.getElementById("navbar");
+    if (window.scrollY > 50) {
+      navbar.classList.add("scrolled");
+    } else {
+      navbar.classList.remove("scrolled");
+    }
+});

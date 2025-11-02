@@ -1,0 +1,31 @@
+/* --- Ẩn con trỏ mặc định --- */
+body, * {
+  cursor: none !important;
+}
+
+/* --- Con trỏ tuỳ chỉnh --- */
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 36px;
+  height: 36px;
+  background: url("../img/roll-hong.png") center/contain no-repeat;
+  pointer-events: none;
+  transform: translate(-50%, -50%) scale(1);
+  transition: 
+    transform 0.15s ease-out, 
+    background 0.25s ease-in-out;
+  z-index: 9999;
+}
+
+/* --- Khi trỏ vào phần có thể click --- */
+.custom-cursor.clickable {
+  background: url("../img/furi-chibi.png") center/contain no-repeat;
+}
+
+/* --- Khi nhấn chuột --- */
+.custom-cursor.active {
+  transform: translate(-50%, -50%) scale(1.4);
+  transition: transform 0.1s ease-out;
+}
