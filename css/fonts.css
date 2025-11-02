@@ -1,0 +1,18 @@
+@font-face {
+  font-family: 'Genshin';            /* tên font bạn đặt */
+  src: url('../fonts/genshin.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  font-family: 'Genshin', sans-serif;
+  color: #fff;
+}
+.main-title {
+  font-family: 'Genshin', sans-serif; /* MyFont là chính, fallback là sans-serif */
+  font-size: 48px;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+}
+

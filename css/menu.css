@@ -1,0 +1,68 @@
+.navbar {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  padding: 15px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  transition: background-color 0.4s ease, backdrop-filter 0.4s ease;
+  z-index: 1000;
+}
+
+.menu-list {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  list-style: none;
+}
+
+.menu-item {
+  position: relative;
+  font-size: 18px;
+  color: #eee;
+  cursor: pointer;
+  padding: 6px 12px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.menu-item:hover {
+  transform: scale(1.15);
+  color: #fff;
+}
+
+.menu-item::after {
+  content: "";
+  position: absolute;
+  bottom: 0; left: 0;
+  height: 2px;
+  width: 0;
+  background: #ff4757;
+  transition: width 0.4s ease;
+}
+
+.menu-item:hover::after {
+  width: 100%;
+}
+
+.icon-slot img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid rgba(255,255,255,0.3);
+  transition: transform 0.3s ease, border 0.3s ease;
+}
+
+.icon-slot img:hover {
+  transform: scale(1.1);
+  border: 3px solid #fff;
+}
+
+/* Khi cuộn */
+.navbar.scrolled {
+  position: fixed;
+  background: rgba(15, 15, 15, 0.75);
+  backdrop-filter: blur(6px);
+}

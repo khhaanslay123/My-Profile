@@ -1,0 +1,55 @@
+/* --- Dòng chữ bên dưới hình chữ nhật --- */
+.subtitle-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 18px;
+  gap: 10px;
+  font-family: 'Genshin', sans-serif;
+}
+
+/* Hộp nền hồng sáng cho "khhaanslay" */
+.tag-box {
+  background: #ff69b4; /* hồng sáng */
+  color: #fff;
+  padding: 4px 14px;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  box-shadow: 0 0 8px rgba(255, 105, 180, 0.6);
+}
+
+/* Dấu gạch giữa */
+.divider {
+  font-size: 1.2rem;
+  color: #fff;
+  opacity: 0.8;
+}
+
+/* Phong cách cho "ngdplowkey!?" */
+.username {
+  color: #fff;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  text-shadow:
+    0 0 8px rgba(255, 255, 255, 0.7),
+    0 0 20px rgba(255, 255, 255, 0.5),
+    0 0 40px rgba(255, 180, 180, 0.3);
+  animation: glowPulse 2s infinite ease-in-out;
+}
+
+/* Hiệu ứng tỏa sáng nhẹ */
+@keyframes glowPulse {
+  0%, 100% {
+    text-shadow:
+      0 0 8px rgba(255, 255, 255, 0.8),
+      0 0 20px rgba(255, 180, 180, 0.6),
+      0 0 40px rgba(255, 100, 100, 0.5);
+  }
+  50% {
+    text-shadow:
+      0 0 15px rgba(255, 255, 255, 1),
+      0 0 30px rgba(255, 180, 180, 0.8),
+      0 0 60px rgba(255, 120, 120, 0.7);
+  }
+}
